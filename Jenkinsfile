@@ -1,7 +1,7 @@
 pipeline {
      agent {
         docker { 
-            image "dotnet:3.1.100-alpine3.10"
+            image "mcr.microsoft.com/dotnet/core/sdk:3.1.100-alpine3.10"
             args "--network=skynet"
         }
     }
