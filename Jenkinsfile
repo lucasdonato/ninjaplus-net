@@ -1,6 +1,10 @@
 pipeline {
-    agent any
-    
+     agent {
+        docker { 
+            image "dotnet:3.1.100-alpine3.10"
+            args "--network=skynet"
+        }
+    }
     stages {
         stage('Build') {
             steps {
