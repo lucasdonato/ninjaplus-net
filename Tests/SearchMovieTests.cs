@@ -1,3 +1,4 @@
+using System.Threading;
 using NinjaPlus.Common;
 using NinjaPlus.Lib;
 using NinjaPlus.Pages;
@@ -32,6 +33,8 @@ namespace NinjaPlus.Tests
                 $"Erro ao verificar se o filme {target} foi encontrado."
             );
             
+            
+            Thread.Sleep(1000);
             Browser.HasNoContent("Puxa! não encontramos nada aqui :(");
             Assert.AreEqual(1, _movie.CountMovie());
         }

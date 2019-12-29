@@ -27,6 +27,7 @@ namespace NinjaPlus.Common
                 SSL = false,
                 Driver = typeof(SeleniumWebDriver),
                 Timeout = TimeSpan.FromSeconds(30000)
+                
             };
 
             if (config["browser"].Equals("chrome"))
